@@ -6,6 +6,7 @@
 package paquete01;
 
 import paquete02.DatoPersonal;
+import paquete02.DatoTrabajo;
 import paquete03.DatosUbicacion;
 import paquete04.DatoAcademico;
 import paquete05.DatoFinal;
@@ -20,6 +21,9 @@ public class Principal {
         String nombre;
         String ciudad;
         String apellidoRetornado;
+        String nombreEmpresa;
+        String direccionEmpresa;
+        double  mejorNota;
         
         double[] misNotas;
         double promedio;
@@ -29,17 +33,26 @@ public class Principal {
         ciudad = DatosUbicacion.obtenerCiudad();
         misNotas = DatoAcademico.obtenerNotas(4);
         promedio = DatoFinal.obtenerPromedio(misNotas);
+        nombreEmpresa = DatoTrabajo.obtenerNombre();
+        direccionEmpresa =DatoTrabajo.obtenerDireccionEmpresa();
+        mejorNota = DatoFinal.obtenerMejorNota(misNotas);
         
         
         System.out.printf("Los datos ingresados son:\n"
                 + "Nombre: %s\n"
                 + "Apellido: %s\n"
                 + "Ciudad: %s\n"
-                + "Promedio: %.2f\n",
+                + "Nombre de la Empresa Empresa: %s\n"
+                + "Direccion de la Empresa: %s\n"
+                + "Promedio: %.2f\n"
+                + "Mejor nota: %.2f\n",
                 nombre,
                 apellidoRetornado,
                 ciudad,
-                promedio);
+                nombreEmpresa,
+                direccionEmpresa,
+                promedio,
+                mejorNota);
     }
     
 }

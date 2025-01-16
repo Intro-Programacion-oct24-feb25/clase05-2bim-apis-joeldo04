@@ -16,7 +16,7 @@ import paquete05.OperadorTres;
  */
 public class Principal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         int valorA = OperadorUno.obtenerNumero(100);
         int valorB = OperadorUno.obtenerNumero(10);
         int suma = OperadorDos.obtenerSuma(valorA, valorB);
