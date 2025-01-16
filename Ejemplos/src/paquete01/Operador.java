@@ -10,6 +10,7 @@ import java.security.SecureRandom;
 
 public class Operador {
     
+    
     public static int obtenerNumero() {
         // objeto generador de números aleatorios
         SecureRandom numerosAleatorios = new SecureRandom();
